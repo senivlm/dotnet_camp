@@ -109,6 +109,85 @@ namespace HW2
             newMat.Print(matrix);
         }*/
 
+        public int[,] HorizontalSpiralSnake(int Row, int Column)
+        {
+            int[,] res = new int[Row, Column];
+
+            int k = 1;
+            int endPoint = Row * Column - 1;
+            int x = 0, iter = 0;
+
+            while (true)
+            {
+                for (var i = iter; i < Column - x; i++)
+                {
+                    res[iter, i] = k++;
+                }
+
+                if (k >= endPoint) { break; }
+
+                iter++;
+
+                if (k >= endPoint) { break; }
+
+                for (var i = iter; i < Row - x; i++)
+                {
+                    res[i, Column - iter] = k++;
+                }
+                if (k >= endPoint) { break; }
+
+                for (var i = Column - iter - 1; i >= x; i--)
+                {
+                    res[Row - iter, i] = k++;
+                }
+
+                if (k >= endPoint) { break; }
+
+                for (var i = Row - iter - 1; i > x; i--)
+                {
+                    res[i, x] = k++;
+                }
+                x++;
+            }
+            return res;
+        }
+
+        public int[,] VerticalSpiralSnake(int Row, int Column)
+        {
+            int[,] res = new int[Row, Column];
+            int endPoint = Row * Column;
+            int iter = 0;
+            int k = 1;
+
+            while(true)
+            {
+                //down
+                for (int i = 0; i < Row; i++)
+                {
+                    res[i, iter] = k++;
+                }
+                //toRight
+                for (int i = 0; i < Column; i++)
+                {
+                    res[Row - iter - 1,i] = k++;
+                }
+                //up
+                for (int i = Row - 2; i >= iter; i--)
+                {
+                    res[i, Column - iter - 1] = k++;
+                }
+                //toLeft
+                for (int i = Column - iter - 1; i > iter + 1; i--)
+                {
+                    res[iter, i - 1] = k++;
+                }
+
+                break;
+            }
+
+            return res;
+        }
+
         public void Print(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
