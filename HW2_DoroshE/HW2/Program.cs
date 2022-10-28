@@ -12,5 +12,9 @@ matrix.Print(snakeMatrix2);*/
 matrix.Print(snakeMatrix3);
 */
 
-int[,] snakeMatrix3 = matrix.VerticalSpiralSnake(3, 4);
-matrix.Print(snakeMatrix3);
+/*int[,] snakeMatrix3 = matrix.VerticalSpiralSnake(4, 6);
+matrix.Print(snakeMatrix3);*/
+
+int[] pixMatrix = { 0, 1, 2, 3, 3, 3 };
+int[] pixMatrix1 = { 1, 1, 1, 2};
+int[] pixMatrix2 = { 1, 1, 1, 1};

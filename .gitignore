@@ -1,2 +1,4 @@
 lectures/
 .vs/
+**/bin/*
+**/obj/*

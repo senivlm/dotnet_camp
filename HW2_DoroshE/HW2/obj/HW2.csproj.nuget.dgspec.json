@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\sigma_dotnet_camp\\HW2\\HW2\\HW2.csproj": {}
+    "F:\\sigma_dotnet_camp\\HW2_DoroshE\\HW2\\HW2.csproj": {}
   },
   "projects": {
-    "F:\\sigma_dotnet_camp\\HW2\\HW2\\HW2.csproj": {
+    "F:\\sigma_dotnet_camp\\HW2_DoroshE\\HW2\\HW2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\sigma_dotnet_camp\\HW2\\HW2\\HW2.csproj",
+        "projectUniqueName": "F:\\sigma_dotnet_camp\\HW2_DoroshE\\HW2\\HW2.csproj",
         "projectName": "HW2",
-        "projectPath": "F:\\sigma_dotnet_camp\\HW2\\HW2\\HW2.csproj",
+        "projectPath": "F:\\sigma_dotnet_camp\\HW2_DoroshE\\HW2\\HW2.csproj",
         "packagesPath": "C:\\Users\\johen\\.nuget\\packages\\",
-        "outputPath": "F:\\sigma_dotnet_camp\\HW2\\HW2\\obj\\",
+        "outputPath": "F:\\sigma_dotnet_camp\\HW2_DoroshE\\HW2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\johen\\AppData\\Roaming\\NuGet\\NuGet.Config",

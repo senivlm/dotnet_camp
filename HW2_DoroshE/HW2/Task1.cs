@@ -98,7 +98,7 @@ namespace HW2
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < matrix.GetLength(1) / 2; j++)
+                for (int j = 0; j < matrix.GetLength(1)  / 2; j++)
                 {
                     int temp = matrix[i, j];
                     matrix[i, j] = matrix[i, matrix.GetLength(1) - j - 1];
@@ -155,34 +155,37 @@ namespace HW2
         public int[,] VerticalSpiralSnake(int Row, int Column)
         {
             int[,] res = new int[Row, Column];
-            int endPoint = Row * Column;
+            int endPoint = Row * Column + 1;
             int iter = 0;
             int k = 1;
 
             while(true)
             {
+                if (k >= endPoint) { break; }
                 //down
-                for (int i = 0; i < Row; i++)
+                for (int i = iter; i < Row - iter; i++)
                 {
                     res[i, iter] = k++;
                 }
+                if (k >= endPoint) { break; } 
                 //toRight
-                for (int i = 0; i < Column; i++)
+                for (int i = iter + 1; i < Column - iter; i++)
                 {
                     res[Row - iter - 1,i] = k++;
                 }
+                if (k >= endPoint) { break; }
                 //up
-                for (int i = Row - 2; i >= iter; i--)
+                for (int i = Row - 2 - iter; i >= iter; i--)
                 {
                     res[i, Column - iter - 1] = k++;
                 }
+                if (k >= endPoint) { break; }
                 //toLeft
                 for (int i = Column - iter - 1; i > iter + 1; i--)
                 {
                     res[iter, i - 1] = k++;
                 }
-
-                break;
+                iter++;
             }
 
             return res;
