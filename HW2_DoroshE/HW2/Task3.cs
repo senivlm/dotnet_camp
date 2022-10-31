@@ -38,6 +38,8 @@ namespace HW2
 
             // by y
 
+            currentHoletLength = 0;
+
             for (int i = 0; i < cube.GetLength(0); i++)
             {
                 for (int j = 0; j < cube.GetLength(1); j++)
@@ -53,11 +55,43 @@ namespace HW2
                 }
             }
 
+            // main diagonal
+
+            currentHoletLength = 0;
+
+            for (int i = 0; i < cube.GetLength(0); i++)
+            {
+                for (int j = 0; j < cube.GetLength(1); j++)
+                {
+                    if (cube[i, j, j] == 0) { currentHoletLength++; }
+                    else { break; }
+                }
+                if (currentHoletLength == cube.GetLength(2)) { return true; }
+                currentHoletLength = 0;
+            }
+
+            // diagonal
+
+            currentHoletLength = 0;
+
+            for (int i = 0; i < cube.GetLength(0); i++)
+            {
+                for (int j = 0; j < cube.GetLength(1); j++)
+                {
+                    if (cube[i, j, cube.GetLength(1) - j - 1] == 0) { currentHoletLength++; }
+                    else { break; }
+                }
+                if (currentHoletLength == cube.GetLength(2)) { return true; }
+                currentHoletLength = 0;
+            }
+
             return false;
         }
 
         public bool HaveVerticalThroughHole(int[,,] cube)
         {
+            int neededLength = cube.GetLength(2);
+
             int currentHoletLength = 0;
 
             for (int i = 0; i < cube.GetLength(0); i++)
@@ -72,6 +106,52 @@ namespace HW2
 
                     if (currentHoletLength == cube.GetLength(0)) { return true; }
                     currentHoletLength = 0;
+                }
+            }
+
+            // diagonal 
+
+            for (int i = 0; i < cube.GetLength(0); i++)
+            {
+                for (int j = 0; j < cube.GetLength(1); j++)
+                {
+                    if (cube[j, cube.GetLength(0) - 1 - j, i] == 0) { currentHoletLength++; }
+                }
+                if (currentHoletLength == cube.GetLength(2)) { return true; }
+                currentHoletLength = 0;
+            }
+
+            // main diagonal 
+
+            for (int i = 0; i < cube.GetLength(0); i++)
+            {
+                for (int j = 0; j < cube.GetLength(1); j++)
+                {
+                    if (cube[j, j, i] == 0) { currentHoletLength++; }
+                }
+                if (currentHoletLength == cube.GetLength(2)) { return true; }
+                currentHoletLength = 0;
+            }
+
+            // 3d diagonal
+
+            int leftBottom = 0;
+            int rightBottom = 0;
+            int leftTop = 0;
+            int rightTop = 0;
+
+            for (int i = 0; i < cube.GetLength(0); i++)
+            {
+                if (cube[i, i, i] == 0) { leftBottom++; }
+                if (cube[i, i, cube.GetLength(0) - i - 1] == 0) { rightBottom++; }
+
+                if (cube[cube.GetLength(0) - i - 1, i, i] == 0) { leftTop++; }
+                if (cube[cube.GetLength(0) - i - 1, i, cube.GetLength(0) - i - 1] == 0) { rightTop++; }
+
+                if (leftBottom == neededLength || rightBottom == neededLength
+                                     || leftTop == neededLength || rightTop == neededLength)
+                {
+                    return true;
                 }
             }
 

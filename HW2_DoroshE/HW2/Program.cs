@@ -32,21 +32,21 @@ matrix.Print(mat2);
 
 Task3 task3Obj = new Task3();
 
-/*var cube1 = new int[,,] { { { 0, 1, 1 }, { 0, 1, 1 }, { 0, 1, 1 } }, 
-                        { { 2, 2, 2 }, { 2, 2, 2 }, { 2, 2, 2 } }, 
-                        { { 1, 3, 3 }, { 3, 3, 3 }, { 3, 3, 3 } } };
+/*var cube1 = new int[,,] { { { 0, 1, 1 }, { 0, 1, 1 }, { 0, 1, 1 } },
+                        { { 2, 2, 2 }, { 2, 2, 2 }, { 2, 2, 2 } },
+                        { { 1, 3, 3 }, { 3, 3, 3 }, { 3, 3, 3 } } };*/
 
-var cube2 = new int[,,] { { { 0, 0, 0 }, { 1, 1, 1 }, { 1, 1, 1 } },
+/*var cube2 = new int[,,] { { { 0, 0, 0 }, { 1, 1, 1 }, { 1, 1, 1 } },
                         { { 0, 2, 2 }, { 2, 2, 2 }, { 2, 2, 2 } },
-                        { { 1, 3, 3 }, { 3, 3, 3 }, { 3, 3, 3 } } };
+                        { { 1, 3, 3 }, { 3, 3, 3 }, { 3, 3, 3 } } };*/
 
-var cube3 = new int[,,] { { { 0, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } },
-                        { { 0, 2, 2 }, { 2, 2, 2 }, { 2, 2, 2 } },
-                        { { 0, 3, 3 }, { 3, 3, 3 }, { 3, 3, 3 } } };
+/*var cube3 = new int[,,] { { { 1, 1, 1 }, { 1, 1, 1 }, { 0, 1, 1} },
+                        { { 1, 1, 2 }, { 0, 1, 2 }, { 2, 1, 1 } },
+                        { { 0, 3, 1 }, { 3, 3, 1 }, { 1, 1, 1 } } };*/
 
-Console.WriteLine(task3Obj.HaveThroughHole(cube3));
-Console.WriteLine(task3Obj.HaveThroughHole(cube1));
-Console.WriteLine(task3Obj.HaveThroughHole(cube2));*/
+/*Console.WriteLine(task3Obj.HaveThroughHole(cube3));*/
+/*Console.WriteLine(task3Obj.HaveThroughHole(cube1));*/
+/*Console.WriteLine(task3Obj.HaveThroughHole(cube2));*/
 
 var cube = task3Obj.CreatingCube(3);
 
