@@ -3,6 +3,7 @@
 namespace HW1
 {
     internal class Buy
+        // покупка може включати кілька різних товарів
     {
         private Product _product;
         private double _count;
