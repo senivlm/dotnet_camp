@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace HW1
 {
     internal class Product
-    {
+    {// Вітаю Вас. Все добре. 
+        //Дуже доречно використати enum
         public enum WeightUnits
         {
             MILIGRAMM,
@@ -61,7 +62,7 @@ namespace HW1
             set
             {
                 if (value != null)
-                {
+                {// Наведіть приклад на занятті, коли виконається ця умова.
                     if (value.GetType() != typeof(string))
                     {
                         throw new ArgumentException("Inputed value is not a string.");
