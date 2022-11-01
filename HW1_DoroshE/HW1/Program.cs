@@ -1,7 +1,7 @@
 ﻿using static HW1.Buy;
 
 namespace HW1
-{
+{//Yes
     internal class Program
     {
         static void Main(string[] args)
