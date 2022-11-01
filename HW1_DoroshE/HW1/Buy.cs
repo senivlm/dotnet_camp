@@ -14,7 +14,7 @@ namespace HW1
                 return _product;
             }
             set
-            {
+            {// ви явно привели до типу. Тому який зміст перевіряти на ти співпадіння типу?
                 if (value.GetType() != typeof(Product) || value == null) { Console.WriteLine("Cannot set this value;"); }
                 else { _product = value; }
             }
